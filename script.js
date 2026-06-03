@@ -5,7 +5,7 @@ const pizzas = [
     nome: "Pizza de Calabresa",
     descricao: "Molho de tomate, mussarela, calabresa, cebola e orégano.",
     preco: "45,00",
-    imagem: "img/calabresa.jpg"
+    imagem: "img/calabresa.jpg.png"
   },
   {
     nome: "Pizza de Mussarela",
