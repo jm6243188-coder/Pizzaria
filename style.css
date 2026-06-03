@@ -119,3 +119,10 @@ button:hover {
     padding: 15px;
   }
 }
+#cardapio .card img {
+  width: 100% !important;
+  height: 220px !important;
+  max-height: 220px !important;
+  object-fit: cover !important;
+  display: block !important;
+}
