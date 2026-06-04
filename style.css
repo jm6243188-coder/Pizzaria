@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,6 +9,7 @@ body {
   color: #222;
 }
 
+/* Cabeçalho */
 header {
   background: #b30000;
   color: white;
@@ -14,67 +19,76 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 38px;
-  letter-spacing: 2px;
+  font-size: 36px;
 }
 
 header p {
-  margin-top: 12px;
-  font-size: 20px;
+  margin-top: 10px;
+  font-size: 18px;
 }
 
+/* Área dos cards */
 #cardapio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
-  padding: 40px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Card da pizza */
 .card {
   background: white;
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.18);
 }
 
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
+/* Imagem da pizza */
+#cardapio .card img,
+#cardapio img,
+.pizza-img {
+  width: 100% !important;
+  height: 220px !important;
+  max-height: 220px !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
+/* Conteúdo do card */
 .card-content {
-  padding: 25px;
+  padding: 20px;
 }
 
 .card h2 {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
   color: #b30000;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .card p {
-  font-size: 18px;
+  font-size: 16px;
   color: #444;
   line-height: 1.4;
 }
 
 .preco {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 18px 0;
   color: #111;
 }
 
+/* Botão WhatsApp */
 button {
   width: 100%;
   background: #25d366;
   color: white;
   border: none;
-  padding: 18px;
+  padding: 15px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -85,44 +99,49 @@ button:hover {
 
 /* Ajuste para celular */
 @media (max-width: 600px) {
+  header {
+    padding: 28px 12px;
+  }
+
   header h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   header p {
-    font-size: 17px;
-  }
-
-  #cardapio {
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .card img {
-    height: 190px;
-  }
-
-  .card h2 {
-    font-size: 24px;
-  }
-
-  .card p {
     font-size: 16px;
   }
 
+  #cardapio {
+    grid-template-columns: 1fr;
+    padding: 18px;
+    gap: 20px;
+  }
+
+  #cardapio .card img,
+  #cardapio img,
+  .pizza-img {
+    height: 190px !important;
+    max-height: 190px !important;
+  }
+
+  .card-content {
+    padding: 18px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
   .preco {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   button {
-    font-size: 18px;
-    padding: 15px;
+    font-size: 17px;
+    padding: 14px;
   }
-}
-#cardapio .card img {
-  width: 100% !important;
-  height: 220px !important;
-  max-height: 220px !important;
-  object-fit: cover !important;
-  display: block !important;
 }
